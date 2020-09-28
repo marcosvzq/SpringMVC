@@ -48,7 +48,7 @@ public class EmployeeController implements WebMvcConfigurer {
 			return err;
 		}
 
-		ModelAndView mav = new ModelAndView("employeesList");
+		ModelAndView mav = new ModelAndView("redirect:/");
 		employeeService.save(employeeObj);
 		List<Employee> list = employeeService.get();
 		mav.addObject("list", list);
